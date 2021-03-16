@@ -1,4 +1,6 @@
-public import java.sql.Connection;
+package com.neusoft.util;
+
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -47,6 +49,6 @@ public class DBUtil {
 
     public static void main(String[] args) {
         DBUtil db = new DBUtil();
-        db.getConnection()
+        db.getConnection();
     }
 }

@@ -29,9 +29,10 @@ public class User {
     public void setTelphone(String telphone) {
         this.telphone = telphone;
     }
-}
+
 
     @Override
     public String toString() {
         return "User [id=" + id + ", userName=" + userName + ", password=" + password + ", telphone=" + telphone + "]";
     }
+}

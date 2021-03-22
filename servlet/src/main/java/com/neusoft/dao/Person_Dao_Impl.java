@@ -11,7 +11,7 @@ import com.neusoft.bean.Person;
 
 public class Person_Dao_Impl implements Person_Dao {
 
-    DBUtil db = new DBUtil();
+    DBUtil db = DBUtil.getInstance();
 
     @Override
     public ArrayList<Person> selectAll() {

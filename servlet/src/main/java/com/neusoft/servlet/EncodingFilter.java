@@ -13,11 +13,9 @@ import javax.servlet.annotation.WebFilter;
 @WebFilter("/*")
 public class EncodingFilter implements Filter {
     public EncodingFilter() {
-        // TODO Auto-generated constructor stub
     }
 
     public void destroy() {
-        // TODO Auto-generated method stub
     }
 
     @Override

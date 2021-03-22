@@ -8,11 +8,12 @@ import com.neusoft.service.Person_service;
 
 public class Test {
     public static void main(String[] args) {
-        Person_service service = new Person_Service_Impl();
-        ArrayList<Person> p = service.getAll();
-        for (Person person : p) {
-            System.out.println(person);
-        }
+        // Person_service service = new Person_Service_Impl();
+        // ArrayList<Person> p = service.getAll();
+        // for (Person person : p) {
+        //     System.out.println(person);
+        // }
+                DBUtil db = DBUtil.getInstance();
     }
 }
 

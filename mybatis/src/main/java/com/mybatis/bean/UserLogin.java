@@ -2,9 +2,9 @@ package com.mybatis.bean;
 
 public class UserLogin {
     private int id;
-    private String username;
+    private String U_username;
     private String password;
-    private String email;
+    private String U_email;
     private int work_id;
 
     public int getId() {
@@ -15,14 +15,6 @@ public class UserLogin {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -31,13 +23,6 @@ public class UserLogin {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public int getWork_id() {
         return work_id;
@@ -49,8 +34,24 @@ public class UserLogin {
 
     @Override
     public String toString() {
-        return "UserLogin [email=" + email + ", id=" + id + ", password=" + password + ", username=" + username
+        return "UserLogin [U_email=" + U_email + ", U_username=" + U_username + ", id=" + id + ", password=" + password
                 + ", work_id=" + work_id + "]";
+    }
+
+    public String getU_username() {
+        return U_username;
+    }
+
+    public void setU_username(String u_username) {
+        U_username = u_username;
+    }
+
+    public String getU_email() {
+        return U_email;
+    }
+
+    public void setU_email(String u_email) {
+        U_email = u_email;
     }
 
 }

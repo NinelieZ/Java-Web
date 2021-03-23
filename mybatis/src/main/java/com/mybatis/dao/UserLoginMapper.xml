@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mybatis.dao.UserLoginDao">
-    <select id="selectById" parameterType="java.lang.Integer" resultType="com.mybatis.bean.UserLogin">
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="UserLogin">
         select * from userlogin where id = #{id}
     </select>
-    <select id="selectByName" parameterType="java.lang.String" resultType="com.mybatis.bean.UserLogin">
+    <select id="selectByName" parameterType="java.lang.String" resultMap="UserLogin">
         select * from userlogin where username =#{username}
     </select>
-    <select id="selectByIdandName" parameterType="com.mybatis.bean.UserLogin" resultType="com.mybatis.bean.UserLogin">
-        select * from userlogin where username =#{username} and id =#{id}
+    <select id="selectByIdandName" parameterType="com.mybatis.bean.UserLogin" resultMap="UserLogin">
+        select * from userlogin where username =#{U_username} and id =#{id}
     </select>
+    <select id="getAll" resultMap="UserLogin">
+        select * from userlogin
+    </select>
+    <select id="selectByPage" parameterType="map" resultMap="UserLogin">
+        select * from userlogin limit #{k_index},#{k_size}
+    </select>
+    <resultMap type="com.mybatis.bean.UserLogin" id="UserLogin">
+        <result property="U_email" column="email"/>
+        <result property="U_username" column="username"/>
+    </resultMap>
 </mapper>
